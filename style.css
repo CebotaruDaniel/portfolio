@@ -4,7 +4,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 
-
 @font-face {
   font-family: Noe;
   src: url(/fonts/FontsFree-Net-NoeDisplay-Bold.ttf);
@@ -16,7 +15,7 @@
   margin: 0;
   box-sizing: border-box;
   letter-spacing: 1.5px;
-	color: #373A3C;
+  color: #373a3c;
 }
 
 a {
@@ -29,17 +28,22 @@ ul {
   list-style: none;
 }
 
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Container */
 .container {
   display: flex;
   justify-content: flex-start;
-  background-color: #fff;
   flex-direction: column;
   width: 90vw;
   border-radius: 3rem;
   margin-top: 2rem;
   background: rgba(255, 255, 255, 0.54);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -49,6 +53,8 @@ ul {
 
 .firstpage {
   padding: 2rem 5rem;
+  background-color: #6c63ff;
+  z-index: 20;
 }
 
 /* Body Style*/
@@ -84,19 +90,24 @@ body {
   align-items: center;
 }
 
-ul a{
-	transition: all 0.5s;
+ul a {
+  transition: all 0.5s;
+  color: #fafafa;
 }
 
-ul a:hover{
-	transform: scale(1.1);
-	transition: all 0.5s;
+ul li {
+  color: #fafafa;
+}
+
+ul a:hover {
+  transform: scale(1.1);
+  transition: all 0.5s;
 }
 
 .logo {
   display: flex;
   gap: 1rem;
-  color: rgba(0, 0, 0, 0.836);
+  color: #373a3c;
   justify-content: center;
   align-items: center;
   font-family: "Caveat", cursive;
@@ -104,11 +115,12 @@ ul a:hover{
 
 .logo h1 {
   font-size: 1.7rem;
+  color: #222224;
 }
 
-.spanlogo{
-	font-family: "Caveat", cursive;
-	font-size: 3.5rem;
+.spanlogo {
+  font-family: "Caveat", cursive;
+  font-size: 3.5rem;
 }
 
 .logo img {
@@ -131,13 +143,13 @@ ul a:hover{
   font-family: "Bebas Neue", cursive;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-	transition: all 0.5s;
-	position: relative;
+  transition: all 0.5s;
+  position: relative;
 }
 
-.contactbutton:hover{
-	transform: scale(1.1);
-	transition: all 0.5s;
+.contactbutton:hover {
+  transform: scale(1.1);
+  transition: all 0.5s;
 }
 
 /* Intro */
@@ -151,21 +163,28 @@ ul a:hover{
 
 .introtext {
   font-size: 3.5rem;
-  color: rgba(0, 0, 0, 0.75);
-	font-family: Noe;
+  color: #fafafa;
+  font-family: Noe;
+}
+
+.introtext2 {
+  font-size: 2rem;
+  color: #222224;
+  font-family: Noe;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 .introname {
   padding: 1rem;
-	text-align: center;
+  text-align: center;
 }
 
 p {
   margin-top: 2rem;
   width: 90%;
-  text-align: justify;
   font-size: 1.3rem;
-  color: rgba(0, 0, 0, 0.686);
+  color: #222224;
 }
 
 .leftpart {
@@ -173,15 +192,14 @@ p {
 }
 
 .rightpart img {
-  width: 35rem;
+  width: 40rem;
 }
 
 span {
-  color: #6c63ff;
-  font-size: 4rem;
-	font-family: Noe;
+  color: #fafafa;
+  font-size: 5rem;
+  font-family: Noe;
 }
-
 
 .spanclass {
   font-size: 5rem;
@@ -189,9 +207,9 @@ span {
 
 .spanclasss {
   font-size: 5rem;
-	color: #373A3C;
+  color: #fafafa;
+  font-family: Noe;
 }
-
 
 .moreaboutme {
   appearance: none;
@@ -220,15 +238,15 @@ span {
   touch-action: manipulation;
   width: 100%;
   will-change: transform;
-  margin-top: 2rem;
   letter-spacing: 1.5px;
   font-family: "Bebas Neue", cursive;
-	transition: all 0.5s;
+  transition: all 0.5s;
+  margin-top: 1rem;
 }
 
-.moreaboutme:hover{
-	transform: scale(1.1);
-		transition: all 0.5s;
+.moreaboutme:hover {
+  transform: scale(1.1);
+  transition: all 0.5s;
 }
 
 /* Arrow */
@@ -237,15 +255,17 @@ span {
   align-items: center;
   justify-content: center;
   transform: rotate(180deg);
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 
 .arrow img {
-  width: 6rem;
+  width: 4rem;
 }
 
 .wave {
   width: 100%;
+  background-color: #6c63ff;
+  margin-top: 5rem;
 }
 
 .wave2 {
@@ -282,7 +302,7 @@ span {
 .textabout span {
   font-size: 4rem;
   font-family: "Caveat", cursive;
-  color: #ffbe55;
+  color: #6c63ff;
 }
 
 /* Pros */
@@ -324,8 +344,8 @@ span {
   max-width: 25%;
 }
 
-.pros h2{
-	font-family: Noe;
+.pros h2 {
+  font-family: Noe;
 }
 
 /* About Me  */
@@ -369,7 +389,7 @@ span {
   gap: 1rem;
 }
 
-.rightme{
+.rightme {
   gap: 1rem;
 }
 
@@ -394,6 +414,19 @@ span {
   background-color: #6c63ff;
   border-radius: 10px;
 } /* Green */
+
+.html,
+.css,
+.php,
+.sql,
+.js,
+.tailwind,
+.react,
+.bootstrap {
+  padding-right: 1.5rem;
+  font-weight: 900;
+}
+
 .css {
   width: 90%;
   background-color: #6c63ff;
@@ -430,10 +463,155 @@ span {
   border-radius: 10px;
 }
 
-
 /* Portofolio */
-.portofolio h1{
-	font-family: "Caveat", cursive;
-	font-size: 5rem;
-	margin-bottom: 2rem;
+.portofolio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.portofolio h1 {
+  font-family: "Caveat", cursive;
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+
+.row1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+/* Cards */
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.card1 {
+  background-color: #fff;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 30px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.hoversvg {
+  transition: 0.5s all;
+}
+
+.hoversvg:hover {
+  transform: scale(1.1);
+  transition: 0.5s all;
+}
+
+@media only screen and (max-width: 640px) {
+  .row1,
+  .pros,
+  .fullpart,
+  .introduction {
+    flex-direction: column;
+  }
+
+  .introduction {
+    margin-top: 3rem;
+  }
+
+  .fullpart {
+    gap: 0;
+    max-width: 90%;
+  }
+
+  .prosdiv {
+    max-width: 70%;
+  }
+
+  .containerr {
+    width: 17rem;
+  }
+
+  .textabout h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .contactbutton {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .textabout span {
+    font-size: 2.3rem;
+  }
+
+  .arrow img {
+    margin-top: 7rem;
+    width: 5rem;
+  }
+
+  .rightpart img {
+    width: 23rem;
+  }
+
+  .moreaboutme {
+    width: 100%;
+  }
+
+  .introtext {
+    font-size: 2rem;
+    color: #fafafa;
+    font-family: Noe;
+  }
+
+  .introtext2 {
+    font-size: 3rem;
+    color: #fafafa;
+    font-family: Noe;
+  }
+
+  .spanclass {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .spanclasss {
+    font-size: 3rem;
+  }
+
+  span {
+    font-size: 2rem;
+  }
+
+  .leftpart {
+    width: 100%;
+    text-align: center;
+  }
+
+  .portofolio h1 {
+    font-size: 3rem;
+  }
+
+  .wave {
+    margin-top: 8rem;
+  }
+
+  .card1 {
+    width: 19rem;
+  }
+  .topnav a {
+    display: none;
+  }
+
+  .container {
+    width: 100vw;
+    margin-top: 0;
+    border-radius: 0;
+  }
 }
