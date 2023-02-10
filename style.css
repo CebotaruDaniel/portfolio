@@ -9,13 +9,16 @@
   src: url(/fonts/FontsFree-Net-NoeDisplay-Bold.ttf);
   font-weight: bold;
 }
-/* Global Style */
+
+/* !Global Style */
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   letter-spacing: 1.5px;
   color: #373a3c;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -34,21 +37,24 @@ ul {
   justify-content: center;
 }
 
-/* Container */
+/* !Global Style End */
+
+/* ?Container */
 .container {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
   width: 90vw;
   border-radius: 3rem;
-  margin-top: 2rem;
-  background: rgba(255, 255, 255, 0.54);
+  margin-top: 1rem;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   position: relative;
   overflow: hidden;
+  margin-bottom: 2rem;
+  background-color: #6c63ff;
 }
 
 .firstpage {
@@ -57,7 +63,65 @@ ul {
   z-index: 20;
 }
 
-/* Body Style*/
+.myservices {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #fff;
+  width: 100%;
+  padding: 5rem;
+  padding-top: 0;
+  padding-bottom: 7rem;
+  position: relative;
+  top: -10px;
+}
+
+.servicecards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.cardd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 30rem;
+  height: 20rem;
+  padding: 2rem;
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+  border: 0.3px solid #6c63ff;
+  transition: all 0.2s;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+}
+
+.cardd p {
+  margin-top: 0;
+  text-align: justify;
+  font-family: system-ui, -apple-system;
+  color: #373a3c;
+}
+
+.cardspan {
+  color: #6c63ff;
+  font-size: 1.4rem;
+}
+
+.cardd:hover {
+  box-shadow: -12px 12px 2px -1px rgba(0, 0, 255, 0.2);
+}
+
+.meow img {
+  width: 30rem;
+}
+
+/* ?Container End */
+
+/* !Body Style*/
 body {
   background: rgb(83, 0, 245);
   background: radial-gradient(
@@ -70,8 +134,9 @@ body {
   align-items: center;
   flex-direction: column;
 }
+/* !Body Style End*/
 
-/* Navbar */
+/* ?Navbar */
 .navbar {
   display: flex;
   justify-content: center;
@@ -115,7 +180,7 @@ ul a:hover {
 
 .logo h1 {
   font-size: 1.7rem;
-  color: #222224;
+  color: #fafafa;
 }
 
 .spanlogo {
@@ -127,7 +192,9 @@ ul a:hover {
   width: 1.5rem;
 }
 
-/* Contact Button */
+/* ?Navbar End*/
+
+/* !Contact Button */
 
 .contactbutton {
   font-size: 1.3rem;
@@ -152,7 +219,9 @@ ul a:hover {
   transition: all 0.5s;
 }
 
-/* Intro */
+/* !Contact Button End */
+
+/* ?Introduction Page Hero */
 .introduction {
   margin-top: 7rem;
   display: flex;
@@ -163,16 +232,27 @@ ul a:hover {
 
 .introtext {
   font-size: 3.5rem;
-  color: #fafafa;
+  color: #ffff;
   font-family: Noe;
+  text-align: left;
 }
 
 .introtext2 {
-  font-size: 2rem;
-  color: #222224;
-  font-family: Noe;
+  font-size: 1rem;
+  color: #fafafae2;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
+  text-align: left;
+}
+
+.intro_paragraph {
+  color: #fafafad6;
+  width: 100%;
+  margin-top: 1rem;
+  font-size: 1rem;
+  text-align: left;
 }
 
 .introname {
@@ -222,8 +302,10 @@ span {
   background-color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 600;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   line-height: normal;
   margin: 0;
   min-height: 60px;
@@ -236,7 +318,7 @@ span {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  width: 100%;
+  width: 40%;
   will-change: transform;
   letter-spacing: 1.5px;
   font-family: "Bebas Neue", cursive;
@@ -249,7 +331,17 @@ span {
   transition: all 0.5s;
 }
 
-/* Arrow */
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+/* ?Introduction Page Hero End*/
+
+/* !Arrow and Waves */
+
 .arrow {
   display: flex;
   align-items: center;
@@ -274,7 +366,10 @@ span {
   top: -10px;
 }
 
-/* About Me Section */
+/* !Arrow and Waves End */
+
+/* ?Section */
+
 .aboutme {
   display: flex;
   align-items: center;
@@ -294,9 +389,32 @@ span {
   top: -10px;
 }
 
+.priorities {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  isolation: isolate;
+  padding: 5rem;
+}
+
+.priorities::after {
+  content: "";
+  background-color: #6c63ff;
+  position: absolute;
+  inset: 0;
+  transform: skewY(-5deg);
+  z-index: -1;
+}
+
 .textabout h1 {
   font-family: "Caveat", cursive;
   font-size: 3.5rem;
+}
+
+.prop_text {
+  color: #fafafa;
 }
 
 .textabout span {
@@ -305,7 +423,7 @@ span {
   color: #6c63ff;
 }
 
-/* Pros */
+/* ?Pros */
 .pros {
   display: flex;
   align-items: center;
@@ -315,7 +433,7 @@ span {
   width: 90%;
 }
 
-/* ProsDiv Components */
+/* !ProsDiv Components */
 .prosdiv img {
   width: 10rem;
 }
@@ -329,7 +447,8 @@ span {
 .prosdiv h2 {
   text-transform: uppercase;
 }
-/* ProsDiv*/
+
+/* ?ProsDiv*/
 
 .prosdiv {
   display: flex;
@@ -342,29 +461,30 @@ span {
   border-radius: 30px;
   padding: 2rem 3rem;
   max-width: 25%;
+  background-color: #fafafa;
 }
 
 .pros h2 {
   font-family: Noe;
 }
 
-/* About Me  */
+/* !About Me  */
 
 .me {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
 
 .fullpart {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   margin-top: 1rem;
   width: 90%;
-  gap: 3rem;
 }
 
 .fullpart h1 {
@@ -386,34 +506,31 @@ span {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 1rem;
 }
 
 .rightme {
   gap: 1rem;
 }
 
-/* Make sure that padding behaves as expected */
-
-/* Container for skill bars */
+/* !Container for skill bars */
 .containerr {
   width: 30rem;
-  background-color: #ddd; /* Grey background */
+  background-color: #ddd;
   border-radius: 10px;
 }
 
 .skills {
-  text-align: right; /* Right-align text */
-  padding-top: 10px; /* Add top padding */
-  padding-bottom: 10px; /* Add bottom padding */
-  color: #fff; /* White text color */
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #fff;
 }
 
 .html {
   width: 90%;
   background-color: #6c63ff;
   border-radius: 10px;
-} /* Green */
+}
 
 .html,
 .css,
@@ -431,50 +548,54 @@ span {
   width: 90%;
   background-color: #6c63ff;
   border-radius: 10px;
-} /* Blue */
+}
 .js {
   width: 65%;
   background-color: #6c63ff;
   border-radius: 10px;
-} /* Red */
+}
 .php {
   width: 60%;
   background-color: #6c63ff;
   border-radius: 10px;
-} /* Dark Grey */
+}
 .tailwind {
   width: 85%;
   background-color: #6c63ff;
   border-radius: 10px;
-} /* Green */
+}
 .bootstrap {
   width: 80%;
   background-color: #6c63ff;
   border-radius: 10px;
-} /* Blue */
+}
 .react {
   width: 30%;
   background-color: #6c63ff;
   border-radius: 10px;
-} /* Red */
+}
 .sql {
   width: 75%;
   background-color: #6c63ff;
   border-radius: 10px;
 }
 
-/* Portofolio */
+/* !Portofolio */
+
 .portofolio {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
+  top: -50px;
 }
 
 .portofolio h1 {
   font-family: "Caveat", cursive;
   font-size: 5rem;
   margin-bottom: 2rem;
+  color: #fafafa;
 }
 
 .row1 {
@@ -512,16 +633,39 @@ span {
   transition: 0.5s all;
 }
 
+footer {
+  width: 100%;
+  text-align: center;
+  font-size: 0.35rem;
+  padding: 2rem;
+  text-transform: uppercase;
+  background-color: #6c63ff;
+}
+
+footer h1 {
+  color: #fafafa;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.text {
+  transform: translateY(100%);
+}
+
+/* !Mobile Responsive Code */
+
 @media only screen and (max-width: 640px) {
   .row1,
   .pros,
-  .fullpart,
-  .introduction {
+  .servicecards,
+  .fullpart {
     flex-direction: column;
   }
 
   .introduction {
     margin-top: 3rem;
+    flex-direction: column-reverse;
+    gap: 0;
   }
 
   .fullpart {
@@ -565,15 +709,22 @@ span {
   }
 
   .introtext {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #fafafa;
     font-family: Noe;
+    text-align: center;
   }
 
   .introtext2 {
-    font-size: 3rem;
     color: #fafafa;
     font-family: Noe;
+    font-size: 0.7rem;
+    text-align: center;
+  }
+
+  .intro_paragraph {
+    font-size: 1rem;
+    text-align: center;
   }
 
   .spanclass {
@@ -602,6 +753,10 @@ span {
     margin-top: 8rem;
   }
 
+  .wave2 {
+    top: -20px;
+  }
+
   .card1 {
     width: 19rem;
   }
@@ -613,5 +768,57 @@ span {
     width: 100vw;
     margin-top: 0;
     border-radius: 0;
+    margin-bottom: 0;
   }
+
+  .meow img {
+    width: 20rem;
+  }
+
+  .servicecards {
+    gap: 0;
+  }
+
+  .cardd {
+    width: 22rem;
+  }
+
+  .cardd p {
+    font-size: 1rem;
+  }
+
+  .priorities {
+    padding: 5rem 0;
+  }
+}
+
+/* !Mobile Responsive Code End */
+
+.skillrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.skill {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 30px;
+  width: 10rem;
+  height: 10rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill img:hover {
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+
+.skill img {
+  width: 7rem;
+  transition: all 0.5s;
 }

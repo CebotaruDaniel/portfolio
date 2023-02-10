@@ -4,20 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cebotaru Daniel</title>
-
-    <script src="libs/gsap/gsap.min.js" defer></script>
-    <script src="libs/gsap/ScrollSmoother.min.js" defer></script>
-    <script src="libs/gsap/ScrollTrigger.min.js" defer></script>
-    <script src="animation.js" defer></script>
-
+    <title>MyFolio - Cebotaru Daniel</title>
+    <link rel="icon" href="/images/blob.svg" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="/node_modules/aos/dist/aos.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
   </head>
   <body>
     <div class="wrapper">
@@ -32,42 +27,64 @@
               </div>
               <div>
                 <ul class="navbar">
-                  <a href=""><li>Home</li></a>
-                  <a href=""><li>About</li></a>
-                  <a href=""><li>Services</li></a>
-                  <a href=""><li>Portfolio</li></a>
+                  <a data-aos="fade-down" data-aos-delay="100" href=""
+                    ><li>Home</li></a
+                  >
+                  <a data-aos="fade-down" data-aos-delay="250" href="#aboutme"
+                    ><li>About</li></a
+                  >
+                  <a
+                    data-aos="fade-down"
+                    data-aos-delay="350"
+                    href="#priorities"
+                    ><li>Services</li></a
+                  >
+                  <a data-aos="fade-down" data-aos-delay="450" href="#port"
+                    ><li>Portfolio</li></a
+                  >
                 </ul>
               </div>
               <div>
-                <h1 class="contactbutton">Contact Me</h1>
+                <h1
+                  class="contactbutton"
+                  data-aos="fade-down"
+                  data-aos-delay="550"
+                >
+                  Contact Me
+                </h1>
               </div>
             </nav>
 
             <div class="introduction" data-aos="fade-in">
               <div class="leftpart">
                 <div class="about">
-                  <div
-                    class="introname"
-                    data-aos="fade-up"
-                    data-aos-anchor-placement="top-bottom"
-                    data-aos-duration="2000"
-                  >
-                    <h1 class="introtext">Hey, I'm <span>Daniel</span></h1>
-                    <h1 class="introtext2">Front-End Developer</h1>
+                  <div class="introname">
+                    <h1 class="introtext text">Hey, I'm Daniel</h1>
+                    <h1 class="introtext2 text">
+                      UI-UX Design and Front-End Developer
+                    </h1>
+                    <p class="intro_paragraph text">
+                      I have good knowledge in web development, interfaces and
+                      user experience
+                    </p>
                   </div>
-                  <a class="moreaboutme" href="index.html">More About Me</a>
+                  <div class="button">
+                    <a class="moreaboutme" href="index.html">More About Me</a>
+                    <a
+                      class="moreaboutme"
+                      href="/download/CV.pdf"
+                      download="CV-Cebotaru Daniel"
+                      >Download CV</a
+                    >
+                  </div>
                 </div>
               </div>
-              <div
-                class="rightpart"
-                data-aos="fade-up"
-                data-aos-duration="2000"
-                data-aos-once="true"
-              >
-                <img src="images/Website SVG/rightpart.svg" alt="" />
+              <div class="rightpart" data-aos="fade-up" data-aos-duration="2000">
+                <img src="images/Website SVG/rightpart.svg" alt="image" />
               </div>
             </div>
           </div>
+
           <section class="aboutme">
             <div class="wave">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -78,156 +95,196 @@
                 ></path>
               </svg>
             </div>
-            <div class="textabout">
-              <h1>
-                Nice to meet you
-                <span class="spanclass">!</span>
-              </h1>
-              <div class="pros">
+
+            <div class="myservices" id="aboutme">
+              <div class="servicecards">
                 <div
-                  class="prosdiv"
-                  data-aos="zoom-in-up"
-                  data-aos-duration="1500"
+                  class="meow"
+                  data-aos="fade-down-right"
+                  data-aos-duration="2500"
                   data-aos-once="true"
                 >
                   <img
-                    class="hoversvg"
-                    src="/images/Website SVG/fast.svg"
-                    alt="fast"
+                    src="images/503 Error Service Unavailable-cuate.svg"
+                    alt=""
                   />
-                  <h2>Fast</h2>
+                </div>
+
+                <div
+                  class="cardd"
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="bottom-bottom"
+                  data-aos-once="true"
+                >
                   <p>
-                    Fast load times and lag free interaction,my highest
-                    priority.
-                  </p>
-                </div>
-                <div
-                  class="prosdiv"
-                  data-aos="zoom-in-up"
-                  data-aos-duration="1600"
-                  data-aos-once="true"
-                >
-                  <img
-                    class="hoversvg"
-                    src="/images/Website SVG/responsive.svg"
-                    alt="responsive"
-                  />
-                  <h2>Responsive</h2>
-                  <p>My layouts will work on any device.</p>
-                </div>
-                <div
-                  class="prosdiv"
-                  data-aos="zoom-in-up"
-                  data-aos-duration="1700"
-                  data-aos-once="true"
-                >
-                  <img
-                    class="hoversvg"
-                    src="/images/Website SVG/intu.svg"
-                    alt="intuitive"
-                  />
-                  <h2>Intuitive</h2>
-                  <p>Strong preference for easy to use, intuitive UX/UI.</p>
-                </div>
-                <div
-                  class="prosdiv"
-                  data-aos="zoom-in-up"
-                  data-aos-duration="1800"
-                  data-aos-once="true"
-                >
-                  <img
-                    class="hoversvg"
-                    src="/images/Website SVG/dynamic.svg"
-                    alt="prosdiv"
-                  />
-                  <h2>Dynamic</h2>
-                  <p>
-                    Websites don't have to be static,I love making pages come to
-                    life.
+                    My name is <span class="cardspan">Cebotaru Daniel</span>. I
+                    am proficient in responsive design techniques and have a
+                    good eye for aesthetics. I am able to take a design and turn
+                    it into a functioning website, ensuring that it looks and
+                    behaves as intended across different devices and platforms.
                   </p>
                 </div>
               </div>
+            </div>
+
+            <div class="textabout" id="priorities">
+              <div class="priorities">
+                <h1 class="prop_text">My Priorities !</h1>
+                <div class="pros">
+                  <div
+                    class="prosdiv"
+                    data-aos="zoom-in"
+                    data-aos-duration="1200"
+                    data-aos-once="true"
+                    data-aos-delay="100"
+                  >
+                    <img
+                      class="hoversvg"
+                      src="/images/Website SVG/fast.svg"
+                      alt="fast"
+                    />
+                    <h2>Fast Page</h2>
+                    <p>
+                      Fast load times and lag free interaction,my highest
+                      priority.
+                    </p>
+                  </div>
+                  <div
+                    class="prosdiv"
+                    data-aos="zoom-in"
+                    data-aos-duration="1200"
+                    data-aos-once="true"
+                    data-aos-delay="300"
+                  >
+                    <img
+                      class="hoversvg"
+                      src="/images/Website SVG/responsive.svg"
+                      alt="responsive"
+                    />
+                    <h2>Responsive</h2>
+                    <p>My layouts will work on any device.</p>
+                  </div>
+                  <div
+                    class="prosdiv"
+                    data-aos="zoom-in"
+                    data-aos-duration="1200"
+                    data-aos-once="true"
+                    data-aos-delay="500"
+                  >
+                    <img
+                      class="hoversvg"
+                      src="/images/Website SVG/intu.svg"
+                      alt="intuitive"
+                    />
+                    <h2>Intuitive</h2>
+                    <p>Strong preference for easy to use, intuitive UX/UI.</p>
+                  </div>
+                  <div
+                    class="prosdiv"
+                    data-aos="zoom-in"
+                    data-aos-duration="1200"
+                    data-aos-delay="600"
+                    data-aos-once="true"
+                  >
+                    <img
+                      class="hoversvg"
+                      src="/images/Website SVG/dynamic.svg"
+                      alt="prosdiv"
+                    />
+                    <h2>Dynamic</h2>
+                    <p>
+                      Websites don't have to be static,I love making pages come
+                      to life.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
               <div class="me">
                 <h1>Skills</h1>
                 <div class="fullpart">
                   <div class="leftme">
-                    <p>HTML</p>
-                    <div
-                      class="containerr"
-                      data-aos="fade-right"
-                      data-aos-once="true"
-                    >
-                      <div class="skills html">90%</div>
-                    </div>
-
-                    <p>CSS</p>
-                    <div
-                      class="containerr"
-                      data-aos="fade-right"
-                      data-aos-once="true"
-                    >
-                      <div class="skills css">90%</div>
-                    </div>
-
-                    <p>JavaScript</p>
-                    <div
-                      class="containerr"
-                      data-aos="fade-right"
-                      data-aos-once="true"
-                    >
-                      <div class="skills js">65%</div>
-                    </div>
-
-                    <p>PHP</p>
-                    <div
-                      class="containerr"
-                      data-aos="fade-right"
-                      data-aos-once="true"
-                    >
-                      <div class="skills php">60%</div>
+                    <div class="skillrow">
+                      <div
+                        class="skill"
+                        data-aos="fade-left"
+                        data-aos-once="true"
+                        data-aos-delay="100"
+                      >
+                        <img src="/images/skill/174854.png" alt="" />
+                      </div>
+                      <div
+                        class="skill"
+                        data-aos="fade-left"
+                        data-aos-once="true"
+                        data-aos-delay="300"
+                      >
+                        <img src="/images/skill/css.png" alt="" />
+                      </div>
+                      <div
+                        class="skill"
+                        data-aos="fade-left"
+                        data-aos-once="true"
+                        data-aos-delay="500"
+                      >
+                        <img src="/images/skill/javascript.png" alt="" />
+                      </div>
+                      <div
+                        class="skill"
+                        data-aos="fade-left"
+                        data-aos-once="true"
+                        data-aos-delay="600"
+                      >
+                        <img
+                          src="/images/skill/Tailwind_CSS_Logo.svg.png"
+                          alt=""
+                        />
+                      </div>
                     </div>
                   </div>
                   <div class="leftme">
-                    <p>TailWind CSS</p>
-                    <div
-                      class="containerr"
-                      data-aos="fade-right"
-                      data-aos-once="true"
-                    >
-                      <div class="skills tailwind">85%</div>
-                    </div>
-
-                    <p>BootStrap</p>
-                    <div
-                      class="containerr"
-                      data-aos="fade-right"
-                      data-aos-once="true"
-                    >
-                      <div class="skills bootstrap">80%</div>
-                    </div>
-
-                    <p>MySQL</p>
-                    <div
-                      class="containerr"
-                      data-aos="fade-right"
-                      data-aos-once="true"
-                    >
-                      <div class="skills sql">75%</div>
-                    </div>
-
-                    <p>React JS</p>
-                    <div
-                      class="containerr"
-                      data-aos="fade-right"
-                      data-aos-once="true"
-                    >
-                      <div class="skills react">30%</div>
+                    <div class="skillrow">
+                      <div
+                        class="skill"
+                        data-aos="fade-right"
+                        data-aos-once="true"
+                        data-aos-delay="700"
+                      >
+                        <img src="/images/skill/Git-Icon-1788C.png" alt="" />
+                      </div>
+                      <div
+                        class="skill"
+                        data-aos="fade-right"
+                        data-aos-once="true"
+                        data-aos-delay="500"
+                      >
+                        <img
+                          src="/images/skill/Bootstrap_logo.svg.png"
+                          alt=""
+                        />
+                      </div>
+                      <div
+                        class="skill"
+                        data-aos="fade-right"
+                        data-aos-once="true"
+                        data-aos-delay="300"
+                      >
+                        <img src="/images/skill/react.png" alt="" />
+                      </div>
+                      <div
+                        class="skill"
+                        data-aos="fade-right"
+                        data-aos-once="true"
+                        data-aos-delay="100"
+                      >
+                        <img src="/images/skill/sass.png" alt="" />
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="wave2">
+            <div class="wave2" id="port">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                 <path
                   fill="#fff"
@@ -240,53 +297,32 @@
               <h1>My Projects</h1>
               <div class="cards">
                 <div class="row1">
-                  <div
-                    data-aos="fade-left"
-                    data-aos-duration="1200"
-                    data-aos-once="true"
-                    class="card1"
-                  ></div>
-                  <div
-                    data-aos="fade-left"
-                    data-aos-duration="1200"
-                    data-aos-once="true"
-                    class="card1"
-                  ></div>
-                  <div
-                    data-aos="fade-left"
-                    data-aos-duration="1200"
-                    data-aos-once="true"
-                    class="card1"
-                  ></div>
+                  <div class="card1"></div>
+                  <div class="card1"></div>
+                  <div class="card1"></div>
                 </div>
 
                 <div class="row1">
-                  <div
-                    data-aos="fade-left"
-                    data-aos-duration="1200"
-                    data-aos-once="true"
-                    class="card1"
-                  ></div>
-                  <div
-                    data-aos="fade-left"
-                    data-aos-duration="1200"
-                    data-aos-once="true"
-                    class="card1"
-                  ></div>
-                  <div
-                    data-aos="fade-left"
-                    data-aos-duration="1200"
-                    data-aos-once="true"
-                    class="card1"
-                  ></div>
+                  <div class="card1"></div>
+                  <div class="card1"></div>
+                  <div class="card1"></div>
                 </div>
               </div>
             </div>
           </section>
+
+          <footer>
+            <h1>Made with ❤️ by Cebotaru Daniel</h1>
+          </footer>
         </div>
       </div>
     </div>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="main.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="main.js" defer></script>
   </body>
 </html>
