@@ -1,17 +1,13 @@
 /* Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
-
+@import "https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap";
 @font-face {
   font-family: Noe;
   src: url(/fonts/FontsFree-Net-NoeDisplay-Bold.ttf);
   font-weight: bold;
 }
-
-/* !Global Style */
-
 * {
   padding: 0;
   margin: 0;
@@ -30,6 +26,17 @@ ul {
   text-decoration: none;
   list-style: none;
 }
+ul a {
+  transition: all 0.5s;
+  color: #fafafa;
+}
+ul a:hover {
+  transform: scale(1.1);
+  transition: all 0.5s;
+}
+ul li {
+  color: #fafafa;
+}
 
 .content {
   display: flex;
@@ -37,9 +44,6 @@ ul {
   justify-content: center;
 }
 
-/* !Global Style End */
-
-/* ?Container */
 .container {
   display: flex;
   justify-content: flex-start;
@@ -86,6 +90,7 @@ ul {
 
 .cardd {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -98,12 +103,29 @@ ul {
   transition: all 0.2s;
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
 }
-
 .cardd p {
   margin-top: 0;
   text-align: justify;
   font-family: system-ui, -apple-system;
   color: #373a3c;
+}
+.cardd:hover {
+  box-shadow: -12px 12px 2px -1px rgba(0, 0, 255, 0.2);
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.socials img {
+  transition: all 0.5s;
+  width: 2rem;
+}
+.socials img:hover {
+  transition: all 0.5s;
+  transform: scale(1.1);
 }
 
 .cardspan {
@@ -111,32 +133,19 @@ ul {
   font-size: 1.4rem;
 }
 
-.cardd:hover {
-  box-shadow: -12px 12px 2px -1px rgba(0, 0, 255, 0.2);
-}
-
 .meow img {
   width: 30rem;
 }
 
-/* ?Container End */
-
-/* !Body Style*/
 body {
   background: rgb(83, 0, 245);
-  background: radial-gradient(
-    circle,
-    rgba(83, 0, 245, 0.5592830882352942) 0%,
-    rgba(255, 255, 255, 1) 100%
-  );
+  background: radial-gradient(circle, rgba(83, 0, 245, 0.5592830882) 0%, rgb(255, 255, 255) 100%);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-/* !Body Style End*/
 
-/* ?Navbar */
 .navbar {
   display: flex;
   justify-content: center;
@@ -155,20 +164,6 @@ body {
   align-items: center;
 }
 
-ul a {
-  transition: all 0.5s;
-  color: #fafafa;
-}
-
-ul li {
-  color: #fafafa;
-}
-
-ul a:hover {
-  transform: scale(1.1);
-  transition: all 0.5s;
-}
-
 .logo {
   display: flex;
   gap: 1rem;
@@ -177,24 +172,18 @@ ul a:hover {
   align-items: center;
   font-family: "Caveat", cursive;
 }
-
 .logo h1 {
   font-size: 1.7rem;
   color: #fafafa;
+}
+.logo img {
+  width: 1.5rem;
 }
 
 .spanlogo {
   font-family: "Caveat", cursive;
   font-size: 3.5rem;
 }
-
-.logo img {
-  width: 1.5rem;
-}
-
-/* ?Navbar End*/
-
-/* !Contact Button */
 
 .contactbutton {
   font-size: 1.3rem;
@@ -208,20 +197,15 @@ ul a:hover {
   display: inline-block;
   padding: 7px 24px;
   font-family: "Bebas Neue", cursive;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
-    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   transition: all 0.5s;
   position: relative;
 }
-
 .contactbutton:hover {
   transform: scale(1.1);
   transition: all 0.5s;
 }
 
-/* !Contact Button End */
-
-/* ?Introduction Page Hero */
 .introduction {
   margin-top: 7rem;
   display: flex;
@@ -232,23 +216,22 @@ ul a:hover {
 
 .introtext {
   font-size: 3.5rem;
-  color: #ffff;
+  color: white;
   font-family: Noe;
   text-align: left;
 }
 
 .introtext2 {
   font-size: 1rem;
-  color: #fafafae2;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: rgba(250, 250, 250, 0.8862745098);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
   text-align: left;
 }
 
 .intro_paragraph {
-  color: #fafafad6;
+  color: rgba(250, 250, 250, 0.8392156863);
   width: 100%;
   margin-top: 1rem;
   font-size: 1rem;
@@ -292,7 +275,9 @@ span {
 }
 
 .moreaboutme {
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background-color: transparent;
   color: #fff;
   border: 2px solid #fff;
@@ -304,8 +289,7 @@ span {
   display: inline-block;
   font-size: 1rem;
   font-weight: 600;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   line-height: normal;
   margin: 0;
   min-height: 60px;
@@ -315,7 +299,8 @@ span {
   text-align: center;
   text-decoration: none;
   transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
-  user-select: none;
+  -moz-user-select: none;
+       user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
   width: 40%;
@@ -325,7 +310,6 @@ span {
   transition: all 0.5s;
   margin-top: 1rem;
 }
-
 .moreaboutme:hover {
   transform: scale(1.1);
   transition: all 0.5s;
@@ -338,10 +322,6 @@ span {
   gap: 1rem;
 }
 
-/* ?Introduction Page Hero End*/
-
-/* !Arrow and Waves */
-
 .arrow {
   display: flex;
   align-items: center;
@@ -349,7 +329,6 @@ span {
   transform: rotate(180deg);
   margin-top: 2rem;
 }
-
 .arrow img {
   width: 4rem;
 }
@@ -365,10 +344,6 @@ span {
   position: relative;
   top: -10px;
 }
-
-/* !Arrow and Waves End */
-
-/* ?Section */
 
 .aboutme {
   display: flex;
@@ -388,6 +363,15 @@ span {
   position: relative;
   top: -10px;
 }
+.textabout h1 {
+  font-family: "Caveat", cursive;
+  font-size: 3.5rem;
+}
+.textabout span {
+  font-size: 4rem;
+  font-family: "Caveat", cursive;
+  color: #6c63ff;
+}
 
 .priorities {
   display: flex;
@@ -398,7 +382,6 @@ span {
   isolation: isolate;
   padding: 5rem;
 }
-
 .priorities::after {
   content: "";
   background-color: #6c63ff;
@@ -408,22 +391,10 @@ span {
   z-index: -1;
 }
 
-.textabout h1 {
-  font-family: "Caveat", cursive;
-  font-size: 3.5rem;
-}
-
 .prop_text {
   color: #fafafa;
 }
 
-.textabout span {
-  font-size: 4rem;
-  font-family: "Caveat", cursive;
-  color: #6c63ff;
-}
-
-/* ?Pros */
 .pros {
   display: flex;
   align-items: center;
@@ -432,23 +403,9 @@ span {
   gap: 1.3rem;
   width: 90%;
 }
-
-/* !ProsDiv Components */
-.prosdiv img {
-  width: 10rem;
+.pros h2 {
+  font-family: Noe;
 }
-
-.prosdiv p {
-  margin-top: 0;
-  font-size: 15px;
-  text-align: left;
-}
-
-.prosdiv h2 {
-  text-transform: uppercase;
-}
-
-/* ?ProsDiv*/
 
 .prosdiv {
   display: flex;
@@ -456,19 +413,23 @@ span {
   justify-content: center;
   flex-direction: column;
   gap: 2rem;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
-    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
   border-radius: 30px;
   padding: 2rem 3rem;
   max-width: 25%;
   background-color: #fafafa;
 }
-
-.pros h2 {
-  font-family: Noe;
+.prosdiv img {
+  width: 10rem;
 }
-
-/* !About Me  */
+.prosdiv p {
+  margin-top: 0;
+  font-size: 15px;
+  text-align: left;
+}
+.prosdiv h2 {
+  text-transform: uppercase;
+}
 
 .me {
   display: flex;
@@ -486,17 +447,15 @@ span {
   margin-top: 1rem;
   width: 90%;
 }
-
 .fullpart h1 {
   color: #ffbe55;
 }
 
+.rightme {
+  gap: 1rem;
+}
 .rightme img {
   width: 30rem;
-}
-
-.leftme p {
-  margin-top: 0;
 }
 
 .leftme {
@@ -507,12 +466,10 @@ span {
   justify-content: center;
   flex-direction: column;
 }
-
-.rightme {
-  gap: 1rem;
+.leftme p {
+  margin-top: 0;
 }
 
-/* !Container for skill bars */
 .containerr {
   width: 30rem;
   background-color: #ddd;
@@ -530,57 +487,65 @@ span {
   width: 90%;
   background-color: #6c63ff;
   border-radius: 10px;
-}
-
-.html,
-.css,
-.php,
-.sql,
-.js,
-.tailwind,
-.react,
-.bootstrap {
   padding-right: 1.5rem;
   font-weight: 900;
 }
 
 .css {
+  padding-right: 1.5rem;
+  font-weight: 900;
   width: 90%;
   background-color: #6c63ff;
   border-radius: 10px;
 }
-.js {
-  width: 65%;
-  background-color: #6c63ff;
-  border-radius: 10px;
-}
+
 .php {
+  padding-right: 1.5rem;
+  font-weight: 900;
   width: 60%;
   background-color: #6c63ff;
   border-radius: 10px;
 }
-.tailwind {
-  width: 85%;
-  background-color: #6c63ff;
-  border-radius: 10px;
-}
-.bootstrap {
-  width: 80%;
-  background-color: #6c63ff;
-  border-radius: 10px;
-}
-.react {
-  width: 30%;
-  background-color: #6c63ff;
-  border-radius: 10px;
-}
+
 .sql {
+  padding-right: 1.5rem;
+  font-weight: 900;
   width: 75%;
   background-color: #6c63ff;
   border-radius: 10px;
 }
 
-/* !Portofolio */
+.js {
+  padding-right: 1.5rem;
+  font-weight: 900;
+  width: 65%;
+  background-color: #6c63ff;
+  border-radius: 10px;
+}
+
+.tailwind {
+  padding-right: 1.5rem;
+  font-weight: 900;
+  width: 85%;
+  background-color: #6c63ff;
+  border-radius: 10px;
+}
+
+.react {
+  padding-right: 1.5rem;
+  font-weight: 900;
+  width: 30%;
+  background-color: #6c63ff;
+  border-radius: 10px;
+}
+
+.bootstrap {
+  padding-right: 1.5rem;
+  font-weight: 900;
+  width: 80%;
+  background-color: #6c63ff;
+  border-radius: 10px;
+}
 
 .portofolio {
   display: flex;
@@ -590,7 +555,6 @@ span {
   position: relative;
   top: -50px;
 }
-
 .portofolio h1 {
   font-family: "Caveat", cursive;
   font-size: 5rem;
@@ -606,8 +570,6 @@ span {
   gap: 2rem;
 }
 
-/* Cards */
-
 .cards {
   display: flex;
   justify-content: center;
@@ -620,14 +582,43 @@ span {
   background-color: #fff;
   width: 20rem;
   height: 20rem;
+  padding: 1rem;
   border-radius: 30px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.card1 img {
+  width: 100%;
+  height: 10rem;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+.card1 h3 {
+  margin-top: 1rem;
+  font-family: "Caveat", cursive;
+  font-size: 2rem;
+  transition: all 0.5s;
+}
+.card1 h3:hover {
+  color: #6c63ff;
+  transition: all 0.5s;
+  transform: scale(1.1);
+}
+
+.usedskills img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0;
+  margin-top: 1rem;
+  border: 0;
 }
 
 .hoversvg {
   transition: 0.5s all;
 }
-
 .hoversvg:hover {
   transform: scale(1.1);
   transition: 0.5s all;
@@ -640,159 +631,16 @@ footer {
   padding: 2rem;
   text-transform: uppercase;
   background-color: #6c63ff;
+  border-top: 1px solid #fafafa;
 }
-
 footer h1 {
   color: #fafafa;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .text {
   transform: translateY(100%);
 }
-
-/* !Mobile Responsive Code */
-
-@media only screen and (max-width: 640px) {
-  .row1,
-  .pros,
-  .servicecards,
-  .fullpart {
-    flex-direction: column;
-  }
-
-  .introduction {
-    margin-top: 3rem;
-    flex-direction: column-reverse;
-    gap: 0;
-  }
-
-  .fullpart {
-    gap: 0;
-    max-width: 90%;
-  }
-
-  .prosdiv {
-    max-width: 70%;
-  }
-
-  .containerr {
-    width: 17rem;
-  }
-
-  .textabout h1 {
-    font-size: 3rem;
-    text-align: center;
-  }
-
-  .contactbutton {
-    font-size: 1rem;
-    text-align: center;
-  }
-
-  .textabout span {
-    font-size: 2.3rem;
-  }
-
-  .arrow img {
-    margin-top: 7rem;
-    width: 5rem;
-  }
-
-  .rightpart img {
-    width: 23rem;
-  }
-
-  .moreaboutme {
-    width: 100%;
-  }
-
-  .introtext {
-    font-size: 2.5rem;
-    color: #fafafa;
-    font-family: Noe;
-    text-align: center;
-  }
-
-  .introtext2 {
-    color: #fafafa;
-    font-family: Noe;
-    font-size: 0.7rem;
-    text-align: center;
-  }
-
-  .intro_paragraph {
-    font-size: 1rem;
-    text-align: center;
-  }
-
-  .spanclass {
-    font-size: 3rem;
-    text-align: center;
-  }
-
-  .spanclasss {
-    font-size: 3rem;
-  }
-
-  span {
-    font-size: 2rem;
-  }
-
-  .leftpart {
-    width: 100%;
-    text-align: center;
-  }
-
-  .portofolio h1 {
-    font-size: 3rem;
-  }
-
-  .wave {
-    margin-top: 8rem;
-  }
-
-  .wave2 {
-    top: -20px;
-  }
-
-  .card1 {
-    width: 19rem;
-  }
-  .topnav a {
-    display: none;
-  }
-
-  .container {
-    width: 100vw;
-    margin-top: 0;
-    border-radius: 0;
-    margin-bottom: 0;
-  }
-
-  .meow img {
-    width: 20rem;
-  }
-
-  .servicecards {
-    gap: 0;
-  }
-
-  .cardd {
-    width: 22rem;
-  }
-
-  .cardd p {
-    font-size: 1rem;
-  }
-
-  .priorities {
-    padding: 5rem 0;
-  }
-}
-
-/* !Mobile Responsive Code End */
 
 .skillrow {
   display: flex;
@@ -802,8 +650,7 @@ footer h1 {
 }
 
 .skill {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   border-radius: 30px;
   width: 10rem;
   height: 10rem;
@@ -812,13 +659,178 @@ footer h1 {
   align-items: center;
   justify-content: center;
 }
-
+.skill img {
+  width: 7rem;
+  transition: all 0.5s;
+}
 .skill img:hover {
   transform: scale(1.1);
   transition: all 0.5s;
 }
 
-.skill img {
-  width: 7rem;
-  transition: all 0.5s;
+@media only screen and (max-width: 640px) {
+  .row1 {
+    flex-direction: column;
+  }
+  .pros {
+    flex-direction: column;
+  }
+  .servicecards {
+    flex-direction: column;
+    gap: 0;
+  }
+  .fullpart {
+    flex-direction: column;
+    gap: 0;
+    max-width: 90%;
+  }
+  .introduction {
+    margin-top: 3rem;
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+  .prosdiv {
+    width: 100rem !important;
+  }
+  .containerr {
+    width: 17rem;
+  }
+  .textabout h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  .textabout span {
+    font-size: 2.3rem;
+  }
+  .contactbutton {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .arrow img {
+    margin-top: 7rem;
+    width: 5rem;
+  }
+  .rightpart img {
+    width: 23rem;
+  }
+  .moreaboutme {
+    width: 100%;
+  }
+  .introtext {
+    font-size: 2.5rem;
+    color: #fafafa;
+    font-family: Noe;
+    text-align: center;
+  }
+  .introtext2 {
+    color: #fafafa;
+    font-family: Noe;
+    font-size: 0.7rem;
+    text-align: center;
+  }
+  .intro_paragraph {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .spanclass {
+    font-size: 3rem;
+    text-align: center;
+  }
+  .spanclasss {
+    font-size: 3rem;
+  }
+  span {
+    font-size: 2rem;
+  }
+  .leftpart {
+    width: 100%;
+    text-align: center;
+  }
+  .portofolio h1 {
+    font-size: 3rem;
+  }
+  .wave {
+    margin-top: 8rem;
+  }
+  .wave2 {
+    top: -20px;
+  }
+  .card1 {
+    width: 19rem;
+  }
+  .topnav a {
+    display: none;
+  }
+  .container {
+    width: 100vw;
+    margin-top: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+  .meow img {
+    width: 20rem;
+  }
+  .cardd {
+    width: 22rem;
+  }
+  .cardd p {
+    font-size: 1rem;
+  }
+  .priorities {
+    padding: 5rem 0;
+  }
 }
+@media only screen and (max-width: 1200px) {
+  .introduction {
+    flex-direction: column-reverse;
+  }
+  .leftpart {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .introname {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  .introduction {
+    flex-direction: column-reverse;
+  }
+  .leftpart {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .introname,
+  .servicecards,
+  .pros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .prosdiv {
+    width: 150rem;
+  }
+  .wave {
+    margin-top: 10rem;
+  }
+}/*# sourceMappingURL=main.css.map */
