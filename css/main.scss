@@ -1,4 +1,4 @@
-$color_1: #373a3c;
+$color_1: #4d4d4d;
 $color_2: black;
 $background-color: #6c63ff;
 $color_4: #fafafa;
@@ -66,15 +66,15 @@ ul {
   text-decoration: none;
   list-style: none;
   a {
-    transition: all 0.5s;
     color: $color_4;
-    &:hover {
-      transform: scale(1.1);
-      transition: all 0.5s;
-    }
   }
   li {
     color: $color_4;
+    transition: all 0.5s;
+    &:hover {
+      transform: scale(1.2);
+      transition: all 0.5s;
+    }
   }
 }
 .content {
@@ -124,7 +124,7 @@ ul {
 }
 .cardd {
   @include flex-column-center();
-	cursor: pointer;
+  cursor: pointer;
   width: 30rem;
   height: 20rem;
   padding: 2rem;
@@ -142,21 +142,20 @@ ul {
   &:hover {
     box-shadow: -12px 12px 2px -1px rgba(0, 0, 255, 0.2);
   }
-
 }
 
-.socials{
-	@include flex-row-center();
-	gap: 1rem;
+.socials {
+  @include flex-row-center();
+  gap: 1rem;
 
-	img{
-		transition: all 0.5s;
-		width: 2rem;
-		&:hover{
-			transition: all 0.5s;
-			transform: scale(1.1);
-		}
-	}
+  img {
+    transition: all 0.5s;
+    width: 2rem;
+    &:hover {
+      transition: all 0.5s;
+      transform: scale(1.1);
+    }
+  }
 }
 
 .cardspan {
@@ -661,6 +660,11 @@ footer {
   .pros {
     flex-direction: column;
   }
+
+  .skillrow,
+  .row1 {
+    flex-wrap: nowrap !important;
+  }
   .servicecards {
     flex-direction: column;
     gap: 0;
@@ -796,6 +800,16 @@ footer {
   .introname {
     @include flex-column-center();
   }
+
+  .skillrow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+	.row1{
+		display: grid;
+    grid-template-columns: 1fr;
+	}
 }
 
 @media only screen and (max-width: 1050px) {

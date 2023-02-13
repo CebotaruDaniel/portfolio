@@ -13,7 +13,7 @@
   margin: 0;
   box-sizing: border-box;
   letter-spacing: 1.5px;
-  color: #373a3c;
+  color: #4d4d4d;
   scroll-behavior: smooth;
 }
 
@@ -27,15 +27,15 @@ ul {
   list-style: none;
 }
 ul a {
-  transition: all 0.5s;
   color: #fafafa;
-}
-ul a:hover {
-  transform: scale(1.1);
-  transition: all 0.5s;
 }
 ul li {
   color: #fafafa;
+  transition: all 0.5s;
+}
+ul li:hover {
+  transform: scale(1.2);
+  transition: all 0.5s;
 }
 
 .content {
@@ -107,7 +107,7 @@ ul li {
   margin-top: 0;
   text-align: justify;
   font-family: system-ui, -apple-system;
-  color: #373a3c;
+  color: #4d4d4d;
 }
 .cardd:hover {
   box-shadow: -12px 12px 2px -1px rgba(0, 0, 255, 0.2);
@@ -167,7 +167,7 @@ body {
 .logo {
   display: flex;
   gap: 1rem;
-  color: #373a3c;
+  color: #4d4d4d;
   justify-content: center;
   align-items: center;
   font-family: "Caveat", cursive;
@@ -675,6 +675,10 @@ footer h1 {
   .pros {
     flex-direction: column;
   }
+  .skillrow,
+  .row1 {
+    flex-wrap: nowrap !important;
+  }
   .servicecards {
     flex-direction: column;
     gap: 0;
@@ -801,6 +805,14 @@ footer h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+  .skillrow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .row1 {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }
 @media only screen and (max-width: 1050px) {
