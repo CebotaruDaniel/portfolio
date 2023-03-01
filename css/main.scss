@@ -58,6 +58,15 @@ $background-color_5: #ddd;
   color: $color_1;
   scroll-behavior: smooth;
 }
+
+body {
+  background: #c4c1c132;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 a {
   text-decoration: none;
   color: $color_2;
@@ -87,17 +96,24 @@ ul {
   justify-content: flex-start;
   flex-direction: column;
   width: 90vw;
+	height: 95vh;
   border-radius: 3rem;
   margin-top: 1rem;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
   position: relative;
-  overflow: hidden;
   margin-bottom: 2rem;
+	overflow-y: scroll;
+	overflow-x: hidden;
   background-color: $background-color_1;
 }
+
+.container::-webkit-scrollbar{
+	display: none;
+}
+
 .firstpage {
   padding: 2rem 5rem;
   background-color: $background-color_1;
@@ -116,6 +132,8 @@ ul {
   position: relative;
   top: -10px;
 }
+
+
 .servicecards {
   display: flex;
   align-items: center;
@@ -167,18 +185,7 @@ ul {
     width: 30rem;
   }
 }
-body {
-  background: rgb(83, 0, 245);
-  background: radial-gradient(
-    circle,
-    rgba(83, 0, 245, 0.5592830882352942) 0%,
-    rgba(255, 255, 255, 1) 100%
-  );
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+
 .navbar {
   display: flex;
   justify-content: center;
@@ -279,6 +286,7 @@ p {
 .rightpart {
   img {
     width: 40rem;
+		z-index: 101;
   }
 }
 span {
@@ -355,7 +363,7 @@ span {
 .wave2 {
   width: 100%;
   position: relative;
-  top: -10px;
+  top: -11px;
 }
 .aboutme {
   display: flex;
@@ -556,10 +564,15 @@ span {
 }
 .row1 {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
+  overflow-x: scroll;
+  white-space: nowrap;
+  width: 70rem;
+  padding: 2rem;
   gap: 2rem;
+}
+
+.row1::-webkit-scrollbar {
+  display: none;
 }
 .cards {
   display: flex;
@@ -578,7 +591,7 @@ span {
   @include flex-column-center();
 
   img {
-    width: 100%;
+    width: 18rem;
     height: 10rem;
     border-radius: 10px;
     border: 1px solid black;
@@ -586,8 +599,8 @@ span {
 
   h3 {
     margin-top: 1rem;
-    font-family: $font-family_3;
-    font-size: 2rem;
+    font-family: $font-family_5;
+    font-size: 1.3rem;
     transition: all 0.5s;
     &:hover {
       color: #6c63ff;
@@ -654,12 +667,18 @@ footer {
   }
 }
 @media only screen and (max-width: 640px) {
-  .row1 {
-    flex-direction: column;
-  }
   .pros {
     flex-direction: column;
   }
+
+	.row1{
+		overflow-y: initial;
+		display: flex !important;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		gap: 2rem !important;
+	}
 
   .skillrow,
   .row1 {
@@ -806,10 +825,14 @@ footer {
     grid-template-columns: 1fr 1fr;
   }
 
-  .row1 {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
+	.row1{
+		display: grid;
+		place-items: center;
+    grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+		width: auto;
+	}
+
 }
 
 @media only screen and (max-width: 1050px) {

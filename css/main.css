@@ -17,6 +17,14 @@
   scroll-behavior: smooth;
 }
 
+body {
+  background: rgba(196, 193, 193, 0.1960784314);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -49,16 +57,21 @@ ul li:hover {
   justify-content: flex-start;
   flex-direction: column;
   width: 90vw;
+  height: 95vh;
   border-radius: 3rem;
   margin-top: 1rem;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
   position: relative;
-  overflow: hidden;
   margin-bottom: 2rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
   background-color: #6c63ff;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
 }
 
 .firstpage {
@@ -135,15 +148,6 @@ ul li:hover {
 
 .meow img {
   width: 30rem;
-}
-
-body {
-  background: rgb(83, 0, 245);
-  background: radial-gradient(circle, rgba(83, 0, 245, 0.5592830882) 0%, rgb(255, 255, 255) 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 .navbar {
@@ -256,6 +260,7 @@ p {
 
 .rightpart img {
   width: 40rem;
+  z-index: 101;
 }
 
 span {
@@ -342,7 +347,7 @@ span {
 .wave2 {
   width: 100%;
   position: relative;
-  top: -10px;
+  top: -11px;
 }
 
 .aboutme {
@@ -564,10 +569,15 @@ span {
 
 .row1 {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
+  overflow-x: scroll;
+  white-space: nowrap;
+  width: 70rem;
+  padding: 2rem;
   gap: 2rem;
+}
+
+.row1::-webkit-scrollbar {
+  display: none;
 }
 
 .cards {
@@ -591,15 +601,15 @@ span {
   justify-content: center;
 }
 .card1 img {
-  width: 100%;
+  width: 18rem;
   height: 10rem;
   border-radius: 10px;
   border: 1px solid black;
 }
 .card1 h3 {
   margin-top: 1rem;
-  font-family: "Caveat", cursive;
-  font-size: 2rem;
+  font-family: Noe;
+  font-size: 1.3rem;
   transition: all 0.5s;
 }
 .card1 h3:hover {
@@ -669,11 +679,16 @@ footer h1 {
 }
 
 @media only screen and (max-width: 640px) {
-  .row1 {
-    flex-direction: column;
-  }
   .pros {
     flex-direction: column;
+  }
+  .row1 {
+    overflow-y: initial;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem !important;
   }
   .skillrow,
   .row1 {
@@ -812,7 +827,10 @@ footer h1 {
   }
   .row1 {
     display: grid;
-    grid-template-columns: 1fr;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: auto;
   }
 }
 @media only screen and (max-width: 1050px) {
