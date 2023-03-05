@@ -7,9 +7,10 @@
     <title>MyFolio - Cebotaru Daniel</title>
     <link rel="icon" href="/images/blob.svg" />
     <link rel="stylesheet" href="/css/main.css" />
+		<link rel="stylesheet" href="/css/responsive.css">
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
@@ -18,7 +19,7 @@
     <div class="wrapper">
       <div class="content">
         <div class="container">
-          <div class="firstpage">
+          <div class="firstpage animate__animated animate__fadeInDown">
             <nav class="navbarfull topnav" id="myTopnav">
               <div class="logo">
                 <div>
@@ -27,19 +28,19 @@
               </div>
               <div>
                 <ul class="navbar">
-                  <a data-aos="fade-down" data-aos-delay="100" href=""
+                  <a data-aos="fade-down" data-aos-delay="700" href=""
                     ><li>Home</li></a
                   >
-                  <a data-aos="fade-down" data-aos-delay="250" href="#aboutme"
+                  <a data-aos="fade-down" data-aos-delay="950" href="#aboutme"
                     ><li>About</li></a
                   >
                   <a
                     data-aos="fade-down"
-                    data-aos-delay="350"
+                    data-aos-delay="1350"
                     href="#priorities"
                     ><li>Services</li></a
                   >
-                  <a data-aos="fade-down" data-aos-delay="450" href="#port"
+                  <a data-aos="fade-down" data-aos-delay="1650" href="#port"
                     ><li>Portfolio</li></a
                   >
                 </ul>
@@ -55,11 +56,13 @@
               </div>
             </nav>
 
-            <div class="introduction" data-aos="fade-in">
+            <div class="introduction" data-aos="fade-in ">
               <div class="leftpart">
                 <div class="about">
                   <div class="introname">
-                    <h1 class="introtext text">Hey, I'm Daniel</h1>
+                    <h1 class="introtext text">
+                      Hey, I'm <span class="name">Daniel</span>
+                    </h1>
                     <h1 class="introtext2 text">
                       UI-UX Design & Front-End Developer
                     </h1>
@@ -71,7 +74,7 @@
                   <div class="button">
                     <a class="moreaboutme" href="index.html">More About Me</a>
                     <a
-                      class="moreaboutme"
+                      class="moreaboutme noback"
                       href="/download/CV.pdf"
                       download="CV-Cebotaru Daniel"
                       >Download CV</a
@@ -80,11 +83,10 @@
                 </div>
               </div>
               <div
-                class="rightpart"
-                data-aos="fade-up"
-                data-aos-duration="2000"
+                class="rightpart "
+								
               >
-                <img src="images/Website SVG/rightpart.svg" alt="image" />
+                <img src="images/transparent/main.png" alt="image" />
               </div>
             </div>
           </div>
@@ -102,18 +104,11 @@
 
             <div class="myservices" id="aboutme">
               <div class="servicecards">
-                <div
-                  class="meow"
-                >
-                  <img
-                    src="images/503 Error Service Unavailable-cuate.svg"
-                    alt=""
-                  />
+                <div class="meow ">
+                  <img src="images/transparent/18.png" alt="" />
                 </div>
 
-                <div
-                  class="cardd"
-                >
+                <div class="cardd">
                   <p>
                     My name is <span class="cardspan">Cebotaru Daniel</span>. I
                     am proficient in responsive design techniques and have a
@@ -149,12 +144,10 @@
               <div class="priorities">
                 <h1 class="prop_text">My Priorities !</h1>
                 <div class="pros">
-                  <div
-                    class="prosdiv"
-                  >
+                  <div class="prosdiv" data-aos="fade-down" data-aos-once="true" data-aos-delay="200">
                     <img
                       class="hoversvg"
-                      src="/images/Website SVG/fast.svg"
+                      src="/images/transparent/20.png"
                       alt="fast"
                     />
                     <h2>Fast Page</h2>
@@ -163,34 +156,28 @@
                       priority.
                     </p>
                   </div>
-                  <div
-                    class="prosdiv"
-                  >
+                  <div class="prosdiv" data-aos="fade-down" data-aos-once="true" data-aos-delay="400">
                     <img
                       class="hoversvg"
-                      src="/images/Website SVG/responsive.svg"
+                      src="/images/transparent/responsive.png"
                       alt="responsive"
                     />
                     <h2>Responsive</h2>
                     <p>My layouts will work on any device.</p>
                   </div>
-                  <div
-                    class="prosdiv"
-                  >
+                  <div class="prosdiv" data-aos="fade-down" data-aos-once="true" data-aos-delay="600">
                     <img
                       class="hoversvg"
-                      src="/images/Website SVG/intu.svg"
+                      src="/images/transparent/8.png"
                       alt="intuitive"
                     />
                     <h2>Intuitive</h2>
                     <p>Strong preference for easy to use, intuitive UX/UI.</p>
                   </div>
-                  <div
-                    class="prosdiv"
-                  >
+                  <div class="prosdiv" data-aos="fade-down" data-aos-once="true" data-aos-delay="900">
                     <img
                       class="hoversvg"
-                      src="/images/Website SVG/dynamic.svg"
+                      src="/images/transparent/17.png"
                       alt="prosdiv"
                     />
                     <h2>Dynamic</h2>
@@ -203,28 +190,20 @@
               </div>
 
               <div class="me">
-                <h1>Skills</h1>
+                <h1 class="fonttext">Skills</h1>
                 <div class="fullpart">
                   <div class="leftme">
                     <div class="skillrow">
-                      <div
-                        class="skill"
-                      >
+                      <div class="skill">
                         <img src="/images/skill/174854.png" alt="" />
                       </div>
-                      <div
-                        class="skill"
-                      >
+                      <div class="skill">
                         <img src="/images/skill/css.png" alt="" />
                       </div>
-                      <div
-                        class="skill"
-                      >
+                      <div class="skill">
                         <img src="/images/skill/javascript.png" alt="" />
                       </div>
-                      <div
-                        class="skill"
-                      >
+                      <div class="skill">
                         <img
                           src="/images/skill/Tailwind_CSS_Logo.svg.png"
                           alt=""
@@ -234,27 +213,19 @@
                   </div>
                   <div class="leftme">
                     <div class="skillrow">
-                      <div
-                        class="skill"
-                      >
+                      <div class="skill">
                         <img src="/images/skill/Git-Icon-1788C.png" alt="" />
                       </div>
-                      <div
-                        class="skill"
-                      >
+                      <div class="skill">
                         <img
                           src="/images/skill/Bootstrap_logo.svg.png"
                           alt=""
                         />
                       </div>
-                      <div
-                        class="skill"
-                      >
+                      <div class="skill">
                         <img src="/images/skill/react.png" alt="" />
                       </div>
-                      <div
-                        class="skill"
-                      >
+                      <div class="skill">
                         <img src="/images/skill/sass.png" alt="" />
                       </div>
                     </div>
@@ -274,10 +245,9 @@
             <div class="portofolio">
               <h1>My Projects</h1>
               <div class="cards">
+                <img class="imagenear" src="/images/transparent/7.png" alt="" />
                 <div class="row1">
-                  <div
-                    class="card1"
-                  >
+                  <div class="card1">
                     <img src="/images/1website.png" alt="" />
                     <a href="https://site-mobila.netlify.app/" target="_blank"
                       ><h3>Furniture Website</h3></a
@@ -292,9 +262,7 @@
                     </div>
                   </div>
 
-                  <div
-                    class="card1"
-                  >
+                  <div class="card1">
                     <img src="/images/2website.png" alt="" />
                     <a href="https://site-mobila.netlify.app/" target="_blank"
                       ><h3>Fragrance Website</h3></a
@@ -306,26 +274,22 @@
                     </div>
                   </div>
 
-									<div
-									class="card1"
-								>
-									<img src="/images/4website.png" alt="" />
-									<a href="https://site-mobila.netlify.app/" target="_blank"
-										><h3>Cereal Website</h3></a
-									>
-									<div class="usedskills">
-										<img src="/images/skill/174854.png" alt="" />
-										<img
-											src="/images/skill/Tailwind_CSS_Logo.svg.png"
-											alt=""
-										/>
-										<img src="/images/skill/javascript.png" alt="" />
-										<img src="/images/skill/php.png" alt="" />
-									</div>
-								</div>
-                  <div
-                    class="card1"
-                  >
+                  <div class="card1">
+                    <img src="/images/4website.png" alt="" />
+                    <a href="https://site-mobila.netlify.app/" target="_blank"
+                      ><h3>Cereal Website</h3></a
+                    >
+                    <div class="usedskills">
+                      <img src="/images/skill/174854.png" alt="" />
+                      <img
+                        src="/images/skill/Tailwind_CSS_Logo.svg.png"
+                        alt=""
+                      />
+                      <img src="/images/skill/javascript.png" alt="" />
+                      <img src="/images/skill/php.png" alt="" />
+                    </div>
+                  </div>
+                  <div class="card1">
                     <img src="/images/3website.png" alt="" />
                     <a href="https://site-mobila.netlify.app/" target="_blank"
                       ><h3>Internship Website</h3></a
@@ -336,15 +300,51 @@
                       <img src="/images/skill/javascript.png" alt="" />
                     </div>
                   </div>
-
-
                 </div>
               </div>
             </div>
           </section>
 
           <footer>
-            <h1>Made with ❤️ by Cebotaru Daniel</h1>
+						<div class="contactform">
+							<div class="maincontacttext">
+								<h1>Contact me to see my detailed pitch deck and deep dive into my approach. Please, get in touch:</h1>
+							</div>
+	
+							<form class="contact" action="">
+								<input type="text" placeholder="What is your name?" name="" id="">
+								<input type="text" placeholder="Email">
+								<textarea name="" id="" cols="30" rows="10" placeholder="Tell me about your project/ideas"></textarea>
+								<div class="contactform__buttons">
+									<button class="buttoncontact button__hover" type="submit">Send your message</button>
+									<a class="buttoncontact button__hover" href="mailto:danyelcebotaru@gmail.com">Send me an Email</a>
+								</div>
+							</form>
+						</div>
+
+						<div class="socialsfooter">
+							<h1>Made with ❤️ by Cebotaru Daniel</h1>
+							<div class="socials">
+								<a target="_blank" href="https://github.com/CebotaruDaniel">
+									<img
+										src="/images/socialmedia/whitesocial2.svg"
+										alt="github"
+								/></a>
+								<a
+									target="_blank"
+									href="https://www.linkedin.com/in/daniel-cebotaru-a495a8250/"
+								>
+									<img
+										src="/images/socialmedia/whitesocial.svg"
+										alt="linkedin"
+								/></a>
+								<a target="_blank" href="">
+									<img
+										src="/images/socialmedia/whitesocial3.svg"
+										alt="twitter"
+								/></a>
+							</div>
+						</div>
           </footer>
         </div>
       </div>
@@ -362,6 +362,5 @@
     <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="/js/main.js" defer></script>
-		
   </body>
 </html>

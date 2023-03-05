@@ -3,9 +3,15 @@
 @import "https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap";
+@import url("https://fonts.googleapis.com/css2?family=Unbounded&display=swap");
 @font-face {
   font-family: Noe;
   src: url(/fonts/FontsFree-Net-NoeDisplay-Bold.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: sh;
+  src: url(/fonts/Shegisha-Regular.ttf);
   font-weight: bold;
 }
 * {
@@ -18,11 +24,18 @@
 }
 
 body {
-  background: rgba(196, 193, 193, 0.1960784314);
+  background: #fafafa;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 a {
@@ -56,18 +69,16 @@ ul li:hover {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  width: 90vw;
-  height: 95vh;
+  width: 95vw;
   border-radius: 3rem;
   margin-top: 1rem;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   position: relative;
-  margin-bottom: 2rem;
-  overflow-y: scroll;
   overflow-x: hidden;
   background-color: #6c63ff;
+  margin-bottom: 1rem;
 }
 
 .container::-webkit-scrollbar {
@@ -94,11 +105,19 @@ ul li:hover {
   top: -10px;
 }
 
+.name {
+  font-size: 5rem;
+}
+
+.imagenear {
+  width: 15rem;
+}
+
 .servicecards {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5rem;
+  gap: 8rem;
 }
 
 .cardd {
@@ -108,13 +127,14 @@ ul li:hover {
   justify-content: center;
   cursor: pointer;
   width: 30rem;
-  height: 20rem;
+  height: 25rem;
   padding: 2rem;
   background: rgb(255, 255, 255);
   border-radius: 5px;
   border: 0.3px solid #6c63ff;
   transition: all 0.2s;
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+  gap: 3rem;
 }
 .cardd p {
   margin-top: 0;
@@ -124,6 +144,10 @@ ul li:hover {
 }
 .cardd:hover {
   box-shadow: -12px 12px 2px -1px rgba(0, 0, 255, 0.2);
+}
+
+.fonttext {
+  font-family: sh;
 }
 
 .socials {
@@ -157,7 +181,7 @@ ul li:hover {
   padding: 1rem;
   gap: 2rem;
   font-size: 1rem;
-  font-family: serif;
+  font-family: sh;
 }
 
 .navbarfull {
@@ -258,8 +282,14 @@ p {
   width: 50%;
 }
 
+.rightpart {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
 .rightpart img {
-  width: 40rem;
+  width: 30rem;
   z-index: 101;
 }
 
@@ -398,6 +428,11 @@ span {
 
 .prop_text {
   color: #fafafa;
+  font-family: sh !important;
+}
+
+.fonttext {
+  font-family: sh !important;
 }
 
 .pros {
@@ -558,10 +593,9 @@ span {
   align-items: center;
   flex-direction: column;
   position: relative;
-  top: -50px;
 }
 .portofolio h1 {
-  font-family: "Caveat", cursive;
+  font-family: sh;
   font-size: 5rem;
   margin-bottom: 2rem;
   color: #fafafa;
@@ -574,6 +608,8 @@ span {
   width: 70rem;
   padding: 2rem;
   gap: 2rem;
+  border-radius: 50px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .row1::-webkit-scrollbar {
@@ -582,10 +618,11 @@ span {
 
 .cards {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  flex-direction: column;
-  gap: 3rem;
+  gap: 1rem;
+  margin-left: 5rem;
+  border-radius: 30px;
 }
 
 .card1 {
@@ -594,7 +631,7 @@ span {
   height: 20rem;
   padding: 1rem;
   border-radius: 30px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -642,10 +679,117 @@ footer {
   text-transform: uppercase;
   background-color: #6c63ff;
   border-top: 1px solid #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
 footer h1 {
   color: #fafafa;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+footer input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.693);
+}
+footer input::placeholder {
+  color: rgba(255, 255, 255, 0.693);
+}
+footer form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 3rem;
+}
+footer input {
+  background-color: transparent;
+  border-style: none none solid;
+  border-width: 1px 1px 2px;
+  border-color: #b1b1b1 #b1b1b1 #9c9c9c;
+  border-radius: 0;
+  width: 100%;
+  padding-right: 0;
+  padding-bottom: 1rem;
+  padding-left: 0;
+  color: white;
+  font-size: 2rem;
+  font-family: "Unbounded", cursive;
+}
+footer textarea {
+  border-radius: 30px;
+  min-height: 200px;
+  width: 100%;
+  margin-bottom: 0;
+  padding: 24px;
+  border: 1px #000;
+  border-radius: 24px;
+  outline-offset: 0px;
+  outline: #333 3px;
+  font-family: "Albert Sans", sans-serif;
+  font-size: 18px;
+}
+footer .maincontacttext {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  margin-bottom: 5rem;
+}
+footer .maincontacttext h1 {
+  font-size: 3rem;
+  text-align: left;
+  font-family: "Unbounded", cursive;
+}
+footer .contactform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+footer .buttoncontact {
+  font-family: "Unbounded", cursive !important;
+  padding: 1rem;
+  outline: none;
+  border-radius: 9px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+}
+footer a {
+  text-transform: none !important;
+  font-size: 0.9rem;
+}
+
+.contactform__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.contactform__buttons .button__hover {
+  transition: all 0.3s;
+}
+.contactform__buttons .button__hover:first-child {
+  background-color: white;
+  color: black;
+}
+.contactform__buttons .button__hover:hover {
+  transform: scale(1.1);
+  transition: all 0.3s;
+}
+
+.socialsfooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.contact {
+  width: 40rem;
 }
 
 .text {
@@ -678,189 +822,19 @@ footer h1 {
   transition: all 0.5s;
 }
 
-@media only screen and (max-width: 640px) {
-  .pros {
-    flex-direction: column;
-  }
-  .row1 {
-    overflow-y: initial;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 2rem !important;
-  }
-  .skillrow,
-  .row1 {
-    flex-wrap: nowrap !important;
-  }
-  .servicecards {
-    flex-direction: column;
-    gap: 0;
-  }
-  .fullpart {
-    flex-direction: column;
-    gap: 0;
-    max-width: 90%;
-  }
-  .introduction {
-    margin-top: 3rem;
-    flex-direction: column-reverse;
-    gap: 0;
-  }
-  .prosdiv {
-    width: 100rem !important;
-  }
-  .containerr {
-    width: 17rem;
-  }
-  .textabout h1 {
-    font-size: 3rem;
-    text-align: center;
-  }
-  .textabout span {
-    font-size: 2.3rem;
-  }
-  .contactbutton {
-    font-size: 1rem;
-    text-align: center;
-  }
-  .arrow img {
-    margin-top: 7rem;
-    width: 5rem;
-  }
-  .rightpart img {
-    width: 23rem;
-  }
-  .moreaboutme {
-    width: 100%;
-  }
-  .introtext {
-    font-size: 2.5rem;
-    color: #fafafa;
-    font-family: Noe;
-    text-align: center;
-  }
-  .introtext2 {
-    color: #fafafa;
-    font-family: Noe;
-    font-size: 0.7rem;
-    text-align: center;
-  }
-  .intro_paragraph {
-    font-size: 1rem;
-    text-align: center;
-  }
-  .spanclass {
-    font-size: 3rem;
-    text-align: center;
-  }
-  .spanclasss {
-    font-size: 3rem;
-  }
-  span {
-    font-size: 2rem;
-  }
-  .leftpart {
-    width: 100%;
-    text-align: center;
-  }
-  .portofolio h1 {
-    font-size: 3rem;
-  }
-  .wave {
-    margin-top: 8rem;
-  }
-  .wave2 {
-    top: -20px;
-  }
-  .card1 {
-    width: 19rem;
-  }
-  .topnav a {
-    display: none;
-  }
-  .container {
-    width: 100vw;
-    margin-top: 0;
-    border-radius: 0;
-    margin-bottom: 0;
-  }
-  .meow img {
-    width: 20rem;
-  }
-  .cardd {
-    width: 22rem;
-  }
-  .cardd p {
-    font-size: 1rem;
-  }
-  .priorities {
-    padding: 5rem 0;
-  }
+input:focus {
+  outline: none;
+  border-color: white;
 }
-@media only screen and (max-width: 1200px) {
-  .introduction {
-    flex-direction: column-reverse;
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
   }
-  .leftpart {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  50% {
+    transform: translate(0, 15px);
   }
-  .button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .introname {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .skillrow {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  .row1 {
-    display: grid;
-    place-items: center;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    width: auto;
-  }
-}
-@media only screen and (max-width: 1050px) {
-  .introduction {
-    flex-direction: column-reverse;
-  }
-  .leftpart {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .introname,
-  .servicecards,
-  .pros {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .prosdiv {
-    width: 150rem;
-  }
-  .wave {
-    margin-top: 10rem;
+  100% {
+    transform: translate(0, 0px);
   }
 }/*# sourceMappingURL=main.css.map */

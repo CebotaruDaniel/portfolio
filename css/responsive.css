@@ -1,0 +1,202 @@
+/* Fonts */
+@import "https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap";
+@import url("https://fonts.googleapis.com/css2?family=Unbounded&display=swap");
+@font-face {
+  font-family: Noe;
+  src: url(/fonts/FontsFree-Net-NoeDisplay-Bold.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: sh;
+  src: url(/fonts/Shegisha-Regular.ttf);
+  font-weight: bold;
+}
+@media only screen and (max-width: 640px) {
+  .pros {
+    flex-direction: column;
+  }
+  .row1 {
+    overflow-y: initial;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem !important;
+  }
+  .skillrow,
+  .row1 {
+    flex-wrap: nowrap !important;
+  }
+  .servicecards {
+    flex-direction: column;
+    gap: 0;
+  }
+  .fullpart {
+    flex-direction: column;
+    gap: 0;
+    max-width: 90%;
+  }
+  .introduction {
+    margin-top: 3rem;
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+  .prosdiv {
+    width: 100rem !important;
+  }
+  .containerr {
+    width: 17rem;
+  }
+  .textabout h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  .textabout span {
+    font-size: 2.3rem;
+  }
+  .contactbutton {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .arrow img {
+    margin-top: 7rem;
+    width: 5rem;
+  }
+  .rightpart img {
+    width: 15rem;
+  }
+  .moreaboutme {
+    width: 100%;
+  }
+  .introtext {
+    font-size: 2.5rem;
+    color: #fafafa;
+    font-family: Noe;
+    text-align: center;
+  }
+  .introtext2 {
+    color: #fafafa;
+    font-family: Noe;
+    font-size: 0.7rem;
+    text-align: center;
+  }
+  .intro_paragraph {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .spanclass {
+    font-size: 3rem;
+    text-align: center;
+  }
+  .spanclasss {
+    font-size: 3rem;
+  }
+  span {
+    font-size: 2rem;
+  }
+  .leftpart {
+    width: 100%;
+    text-align: center;
+  }
+  .portofolio h1 {
+    font-size: 3rem;
+  }
+  .wave {
+    margin-top: 8rem;
+  }
+  .wave2 {
+    top: -20px;
+  }
+  .card1 {
+    width: 19rem;
+  }
+  .topnav a {
+    display: none;
+  }
+  .container {
+    width: 100vw;
+    margin-top: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+  }
+  .meow img {
+    width: 20rem;
+  }
+  .cardd {
+    width: 22rem;
+  }
+  .cardd p {
+    font-size: 1rem;
+  }
+  .priorities {
+    padding: 5rem 0;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .introduction {
+    flex-direction: column-reverse;
+  }
+  .leftpart {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .introname {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .skillrow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .row1 {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: auto;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  .introduction {
+    flex-direction: column-reverse;
+  }
+  .leftpart {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .introname,
+  .servicecards,
+  .pros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .prosdiv {
+    width: 150rem;
+  }
+  .wave {
+    margin-top: 10rem;
+  }
+}/*# sourceMappingURL=responsive.css.map */
