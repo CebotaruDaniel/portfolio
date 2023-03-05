@@ -21,6 +21,7 @@ $background-background-color: transparent;
 $background-color_4: #fafafa;
 $background-color_5: #ddd;
 
+
 /* Fonts */
 @import "https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap";
@@ -117,7 +118,7 @@ ul {
   position: relative;
   overflow-x: hidden;
   background-color: $background-color_1;
-	margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .container::-webkit-scrollbar {
@@ -182,6 +183,11 @@ ul {
 
 .fonttext {
   font-family: sh;
+}
+
+.noback {
+  background: transparent !important;
+  color: white !important;
 }
 
 .socials {
@@ -604,11 +610,12 @@ span {
   box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
     rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
 }
 
-.row1::-webkit-scrollbar {
-  display: none;
-}
 .cards {
   display: flex;
   justify-content: flex-start;
@@ -683,10 +690,10 @@ footer {
   }
 
   form {
-		display: flex;
-		align-items: flex-start;
-		justify-content: flex-start;
-		flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
     gap: 3rem;
   }
 
@@ -702,7 +709,7 @@ footer {
     padding-left: 0;
     color: white;
     font-size: 2rem;
-		font-family: 'Unbounded', cursive;
+    font-family: "Unbounded", cursive;
   }
 
   textarea {
@@ -721,71 +728,67 @@ footer {
 
   .maincontacttext {
     @include flex-column-center();
-    width: 70%;
+    width: 50%;
     margin-bottom: 5rem;
 
     h1 {
       font-size: 3rem;
       text-align: left;
-			font-family: 'Unbounded', cursive;
+      font-family: "Unbounded", cursive;
     }
   }
 
   .contactform {
     @include flex-column-center();
-		margin-bottom: 5rem;
+    margin-bottom: 5rem;
   }
 
-	.buttoncontact{
-		font-family: 'Unbounded', cursive !important;
-		padding: 1rem;
-		outline: none;
-		border-radius: 9px;
-		border: 1px solid white;
-		background: transparent;
-		color: white;
+  .buttoncontact {
+    font-family: "Unbounded", cursive !important;
+    padding: 1rem;
+    outline: none;
+    border-radius: 9px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+  }
 
-	}
-
-	a{
-		text-transform: none !important;
-		font-size: 0.9rem;
-	}
+  a {
+    text-transform: none !important;
+    font-size: 0.9rem;
+  }
 }
 
-.contactform__buttons{
-	@include flex-row-center();
-	gap: 1rem;
-	
-	.button__hover{
-		transition: all 0.3s;
-	}
+.contactform__buttons {
+  @include flex-row-center();
+  gap: 1rem;
 
-	.button__hover:first-child{
-		background-color: white;
-		color: black;
-	}
+  .button__hover {
+    transition: all 0.3s;
+  }
 
-	.button__hover:hover{
-		transform: scale(1.1);
-		transition: all 0.3s;
-	}
+  .button__hover:first-child {
+    background-color: white;
+    color: black;
+  }
+
+  .button__hover:hover {
+    transform: scale(1.1);
+    transition: all 0.3s;
+  }
 }
 
-.socialsfooter{
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	width: 100%;
+.socialsfooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
 }
 
 .contact {
   width: 40rem;
 }
 
-.text {
-  transform: translateY(100%);
-}
 .skillrow {
   display: flex;
   align-items: center;
@@ -812,12 +815,10 @@ footer {
   }
 }
 
-input:focus{
-	outline: none;
-	border-color: white;
+input:focus {
+  outline: none;
+  border-color: white;
 }
-
-
 
 @keyframes floating {
   0% {
