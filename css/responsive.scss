@@ -59,7 +59,7 @@ $background-color_5: #ddd;
 }
 
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 700px) {
   .pros {
     flex-direction: column;
   }
@@ -72,6 +72,10 @@ $background-color_5: #ddd;
     flex-direction: column;
     gap: 2rem !important;
   }
+
+	.contact{
+		width: 80% !important;
+	}
 
   .skillrow,
   .row1 {
@@ -224,7 +228,7 @@ $background-color_5: #ddd;
     place-items: center;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-    width: auto;
+		width: auto;
   }
 }
 
@@ -248,6 +252,18 @@ $background-color_5: #ddd;
     @include flex-column-center();
   }
 
+	.servicecards{
+		gap: 0;
+	}
+
+	.cards{
+		margin-left: 0;
+	}
+
+	.imagenear{
+		display: none;
+	}
+
   .prosdiv {
     width: 150rem;
   }
@@ -255,4 +271,35 @@ $background-color_5: #ddd;
   .wave {
     margin-top: 10rem;
   }
+}
+
+
+@media only screen and (max-width: 450px) {
+	.skill{
+		width: 6rem;
+		height: 6rem;
+
+		img{
+			width: 4rem;
+		}
+	}
+
+	.skillrow{
+		gap: 2rem;
+	}
+	.maincontacttext {
+		width: 70% !important;
+
+		h1{
+			font-size: 2rem !important;
+		}
+	}
+	input::placeholder{
+		font-size: 1.3rem;
+	}
+
+	footer h1{
+		font-size: 1rem;
+	}
+
 }

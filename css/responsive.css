@@ -14,7 +14,7 @@
   src: url(/fonts/Shegisha-Regular.ttf);
   font-weight: bold;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 700px) {
   .pros {
     flex-direction: column;
   }
@@ -25,6 +25,9 @@
     justify-content: center;
     flex-direction: column;
     gap: 2rem !important;
+  }
+  .contact {
+    width: 80% !important;
   }
   .skillrow,
   .row1 {
@@ -193,10 +196,46 @@
     align-items: center;
     justify-content: center;
   }
+  .servicecards {
+    gap: 0;
+  }
+  .cards {
+    margin-left: 0;
+  }
+  .imagenear {
+    display: none;
+  }
   .prosdiv {
     width: 150rem;
   }
   .wave {
     margin-top: 10rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .skill {
+    width: 6rem;
+    height: 6rem;
+  }
+  .skill img {
+    width: 4rem;
+  }
+  .skillrow {
+    gap: 2rem;
+  }
+  .maincontacttext {
+    width: 70% !important;
+  }
+  .maincontacttext h1 {
+    font-size: 2rem !important;
+  }
+  input::-moz-placeholder {
+    font-size: 1.3rem;
+  }
+  input::placeholder {
+    font-size: 1.3rem;
+  }
+  footer h1 {
+    font-size: 1rem;
   }
 }/*# sourceMappingURL=responsive.css.map */
