@@ -116,7 +116,7 @@
   .card1 {
     width: 19rem;
   }
-  .topnav a {
+  .topnav ul a {
     display: none;
   }
   .container {

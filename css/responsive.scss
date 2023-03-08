@@ -174,10 +174,12 @@ $background-color_5: #ddd;
     width: 19rem;
   }
   .topnav {
-    a {
+    ul a {
       display: none;
     }
   }
+
+
   .container {
     width: 100vw;
     margin-top: 0;
