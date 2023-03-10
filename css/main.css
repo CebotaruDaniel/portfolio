@@ -14,6 +14,11 @@
   src: url(/fonts/Shegisha-Regular.ttf);
   font-weight: bold;
 }
+@font-face {
+  font-family: Magna;
+  src: url(/fonts/Magna.ttf);
+  font-weight: bold;
+}
 * {
   padding: 0;
   margin: 0;
@@ -107,10 +112,11 @@ ul li:hover {
 
 .name {
   font-size: 5rem;
+  font-family: Neo;
 }
 
 .imagenear {
-  width: 15rem;
+  width: 30rem;
 }
 
 .servicecards {
@@ -250,7 +256,7 @@ ul li:hover {
 .introtext {
   font-size: 3.5rem;
   color: white;
-  font-family: Noe;
+  font-family: Magna;
   text-align: left;
 }
 
@@ -287,15 +293,25 @@ p {
   width: 50%;
 }
 
-.rightpart {
+.rightpart img {
+  width: 30rem;
+  z-index: 101;
+}
+
+.firstlayer {
   animation-name: floating;
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
-.rightpart img {
+
+.uplayer {
+  position: absolute;
+  top: 0;
+}
+.uplayer img {
   width: 30rem;
-  z-index: 101;
+  z-index: 10000;
 }
 
 span {
@@ -392,6 +408,10 @@ span {
   flex-direction: column;
   position: relative;
   top: -150px;
+}
+
+.text {
+  color: #e6e5e5;
 }
 
 .textabout {
@@ -610,12 +630,10 @@ span {
 }
 
 .row1 {
-  display: flex;
-  overflow-x: scroll;
-  white-space: nowrap;
-  width: 70rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   padding: 2rem;
-  gap: 2rem;
+  gap: 3rem;
   border-radius: 50px;
   box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
@@ -625,30 +643,28 @@ span {
 
 .cards {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  gap: 1rem;
+  justify-content: center;
+  gap: 4rem;
   margin-left: 5rem;
   border-radius: 30px;
 }
 
 .card1 {
   background-color: #fff;
-  width: 20rem;
-  height: 20rem;
+  width: 15rem;
+  height: auto;
   padding: 1rem;
   border-radius: 30px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 .card1 img {
-  width: 18rem;
-  height: 10rem;
+  width: 100%;
   border-radius: 10px;
-  border: 1px solid black;
 }
 .card1 h3 {
   margin-top: 1rem;
@@ -835,7 +851,7 @@ input:focus {
     transform: translate(0, 0px);
   }
   50% {
-    transform: translate(0, 15px);
+    transform: translate(0, 10px);
   }
   100% {
     transform: translate(0, 0px);
